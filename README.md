@@ -81,7 +81,7 @@ You can also test your code by deploying the image to a Lambda function in AWS u
 4. `repositoryName="hello-world-php-aws-lambda-container"`
 5. `architectures="arm64"`
 6. `aws iam create-role --role-name $roleName --assume-role-policy-document '{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"Service":"lambda.amazonaws.com"},"Action":"sts:AssumeRole"}]}'`
-7. `aws iam attach-role-policy --role-name $roleName --policy-arn $(aws iam list-policies --scope AWS --query 'Policies[?PolicyName==`AWSLambdaExecute`].Arn' --output text)`
+7. `aws iam attach-role-policy --role-name $roleName --policy-arn $(aws iam list-policies --scope AWS --query "Policies[?PolicyName=='AWSLambdaExecute'].Arn" --output text)`
 8. `aws lambda create-function --function-name $functionName --role $(aws iam get-role --role-name LambdaExecutionRole --query 'Role.Arn' --output text) --architectures $architectures --package-type Image --code ImageUri=$(aws --region $region ecr describe-repositories --repository-names $repositoryName --query 'repositories[].repositoryUri' --output text):latest`
 
 ### Execution
