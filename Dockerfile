@@ -49,7 +49,7 @@ COPY --from=builder /lambda-runtime /var/runtime
 
 COPY php /var/task/
 RUN cd /var/task && \
-    rm -r vendor && \
+    rm -rf vendor && \
     /var/lang/bin/php /var/lang/bin/composer install
 
 CMD [ "index" ]
