@@ -44,6 +44,13 @@ Any output from the function will be returned in the HTTP response.
 You can also test your code by deploying the image to a Lambda function in AWS using the Deployment instructions below.
 
 ## Deployment
+
+This section assumes you already have an [AWS account](https://aws.amazon.com) and (optionally) installed the [AWS Command Line Interface](https://aws.amazon.com/cli/).  You can setup an AWS account free of charge, without having to make any financial commitments.  AWS charges you for what you use instead of the ability to use.
+
+Each stage has UI & CLI examples, you should perform one **or** the other.
+
+All examples default to the Europe/London (eu-west-2) region but you should change this to your [closest geographic region](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) (except N.Virginia, you should **never** use us-east-1).
+
 ### Upload image to AWS Elastic Container Registry (ECR)
 #### AWS Console
 1. Navigate to the [ECR Repositories](https://eu-west-2.console.aws.amazon.com/ecr/repositories) page
@@ -63,7 +70,7 @@ You can also test your code by deploying the image to a Lambda function in AWS u
 7. `docker tag ${repositoryName}:latest ${repositoryUri}:latest`
 8. `docker push ${repositoryUri}:latest`
 
-### Create/Update Lambda Function
+### Create Lambda Function
 #### AWS Console
 1. Open the [Lambda](https://eu-west-2.console.aws.amazon.com/lambda/home) service and select the "Functions" menu item
 2. Click the "Create function" button
