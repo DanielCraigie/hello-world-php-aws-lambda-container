@@ -1,5 +1,9 @@
 # PHP HelloWorld AWS Lambda Container
-This repository contains a base implementation of a PHP Lambda function defined as a Docker container.
+This repository contains the second project in a series aimed at creating Serverless PHP Applications.
+
+1. [Serverless PHP in AWS](https://github.com/DanielCraigie/serverless-php-in-aws) - explores the creation of PHP Lambda functions using Binaries in Lambda layers
+2. This project covers a base implementation of a PHP Lambda function defined as a Docker container.
+3. [Hello World PHP AWS SAM Example]() - contains an example implementation of PHP Lambda Functions structured behind the [AWS API Gateway](https://aws.amazon.com/api-gateway/) service
 
 AWS announced [Lambda support for container images in 2020](https://aws.amazon.com/blogs/aws/new-for-aws-lambda-container-image-support) providing an alternative to the original method of [deploying code as a Zip file](https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-zip.html).
 The main disadvantage of deploying PHP scripts in a Zip file was that you had to define a Custom PHP Runtime [in a Layer](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html) so the Lambda service could execute the code.
