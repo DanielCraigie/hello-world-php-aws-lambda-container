@@ -1,4 +1,4 @@
-# PHP HelloWorld AWS Lambda Container
+# PHP Hello World AWS Lambda Container
 This repository contains the second project in a series aimed at creating Serverless PHP Applications.
 
 1. [Serverless PHP in AWS](https://github.com/DanielCraigie/serverless-php-in-aws) - explores the creation of PHP Lambda functions using Binaries in Lambda layers
